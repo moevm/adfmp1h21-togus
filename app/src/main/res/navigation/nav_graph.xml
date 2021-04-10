@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFrag">
+    <fragment
+        android:id="@+id/menuFrag"
+        android:name="com.example.toguz.MenuFrag"
+        android:label="menu_lay"
+        tools:layout="@layout/menu_lay" >
+        <action
+            android:id="@+id/action_menuFrag_to_pvcFrag"
+            app:destination="@id/pvcFrag" />
+        <action
+            android:id="@+id/action_menuFrag_to_statFrag"
+            app:destination="@id/statFrag" />
+        <action
+            android:id="@+id/action_menuFrag_to_instructFrag"
+            app:destination="@id/instructFrag" />
+        <action
+            android:id="@+id/action_menuFrag_to_pvpFrag"
+            app:destination="@id/pvpFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructFrag"
+        android:name="com.example.toguz.instructFrag"
+        android:label="instruct_lay"
+        tools:layout="@layout/instruct_lay" >
+        <action
+            android:id="@+id/action_instructFrag_to_menuFrag"
+            app:destination="@id/menuFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/pvcFrag"
+        android:name="com.example.toguz.PvcFrag"
+        android:label="pvc_lay"
+        tools:layout="@layout/pvc_lay" >
+        <action
+            android:id="@+id/action_pvcFrag_to_menuFrag"
+            app:destination="@id/menuFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/pvpFrag"
+        android:name="com.example.toguz.PvpFrag"
+        android:label="pvp_lay"
+        tools:layout="@layout/pvp_lay" >
+        <action
+            android:id="@+id/action_pvpFrag_to_menuFrag"
+            app:destination="@id/menuFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/statFrag"
+        android:name="com.example.toguz.statFrag"
+        android:label="stat_lay"
+        tools:layout="@layout/stat_lay" >
+        <action
+            android:id="@+id/action_statFrag_to_menuFrag"
+            app:destination="@id/menuFrag" />
+    </fragment>
+</navigation>
